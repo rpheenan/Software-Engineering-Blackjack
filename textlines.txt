@@ -1,1 +1,2 @@
-This is the textlines file for this project
+Ryan Heenan and Broc Burger
+This is the textlines file for this project.
