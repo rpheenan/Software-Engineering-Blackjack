@@ -1,1 +1,4 @@
-//Blackjack class of game
+package com.example.brocburger.blackjack;
+
+public class BlackJack {
+}
