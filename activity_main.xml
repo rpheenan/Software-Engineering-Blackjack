@@ -7,51 +7,200 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/dealerCard1"
+        android:id="@+id/dealerCard2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="46dp"
-        android:layout_marginLeft="30dp"
+        android:layout_above="@+id/editText2"
+        android:layout_alignStart="@+id/playerCard1"
         android:width="50dp"
         android:height="100dp"
         android:background="@color/cardColor"
         android:textAlignment="center"
-        android:textSize="30dp" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/playerCard1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="184dp"
+        android:layout_marginEnd="-135dp"
+        android:layout_toStartOf="@+id/stopBtn"
         android:width="50dp"
         android:height="100dp"
         android:background="@color/cardColor"
         android:textAlignment="center"
-        android:textSize="30dp"
-        android:layout_marginLeft="30dp"
-        />
+        android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/dealerCard2"
+        android:id="@+id/dealerCard1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/dealerCard1"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/playerCard2"
+        android:layout_marginTop="75dp"
         android:width="50dp"
         android:height="100dp"
         android:background="@color/cardColor"
         android:textAlignment="center"
-        android:textSize="30dp" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/playerCard2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/playerCard1"
+        android:layout_marginStart="22dp"
         android:width="50dp"
         android:height="100dp"
         android:background="@color/cardColor"
         android:textAlignment="center"
-        android:textSize="30dp" />
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/dealerCard3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/dealerCard2"
+        android:layout_centerHorizontal="true"
+        android:width="50dp"
+        android:height="100dp"
+        android:background="@color/cardColor"
+        android:textAlignment="center"
+        android:textSize="30sp" 
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/playerCard3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/playerCard1"
+        android:layout_marginStart="150dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:background="@color/cardColor"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/dealerCard4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/dealerCard2"
+        android:layout_toEndOf="@+id/editText"
+        android:width="50dp"
+        android:height="100dp"
+        android:background="@color/cardColor"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/playerCard4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/playerCard1"
+        android:layout_toEndOf="@+id/stopBtn"
+        android:width="50dp"
+        android:height="100dp"
+        android:background="@color/cardColor"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/dealerCard5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/playerCard5"
+        android:layout_alignTop="@+id/dealerCard2"
+        android:width="50dp"
+        android:height="100dp"
+        android:background="@color/cardColor"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/playerCard5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/playerCard1"
+        android:layout_marginEnd="39dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:background="@color/cardColor"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/hitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/stopBtn"
+        android:layout_marginStart="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp" 
+        android:text="HIT"
+        />
+
+    <Button
+        android:id="@+id/stopBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="94dp"
+        android:layout_marginStart="135dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="135dp" 
+        android:text="STOP"
+        />
+
+    <Button
+        android:id="@+id/newGameBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/stopBtn"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentRight="true"
+        android:text="NEW GAME"
+        />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/hitBtn"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Dealer's Cards"
+        android:layout_alignLeft="@+id/hitBtn" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/playerCard1"
+        android:layout_alignStart="@+id/hitBtn"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Player's Cards"
+        android:layout_alignLeft="@+id/hitBtn" />
 
 </RelativeLayout>
