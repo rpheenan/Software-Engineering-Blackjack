@@ -3,8 +3,8 @@ package com.example.brocburger.blackjack;
 public class BlackJack {
 
 
-    private int Dealervalue;
-    private int Playervalue;
+    public int Dealervalue;
+    public int Playervalue;
     private int DealernumAces;
     private int PlayernumAces;
 
@@ -31,10 +31,45 @@ public class BlackJack {
     }
 
     // ace 2 3 4 5 6 7 8 9 10 J Q K
+    public void playerHit(int val)
+    {
+        Playervalue += val;
+        if (val == 11)
+            PlayernumAces += 1;
+        Playervalue = PlayercheckAces();
+    }
+
+    public int PlayercheckAces()
+    {
+        while(Playervalue > 21 && PlayernumAces > 0)
+        {
+            Playervalue -= 10;
+            PlayernumAces -=1;
+        }
+        return Playervalue;
+    }
+
+    public void dealerHit(int val)
+    {
+        Dealervalue += val;
+        if (val == 11)
+            DealernumAces += 1;
+        Dealervalue = DealercheckAces();
+    }
+
+    public int DealercheckAces()
+    {
+        while(Dealervalue > 21 && DealernumAces > 0)
+        {
+            Dealervalue -= 10;
+            DealernumAces -=1;
+        }
+        return Dealervalue;
+    }
 
     public boolean isGameOver()
     {
-        return check21() > 0;
+        return bust() > 0;
     }
 
     public int check21()
@@ -49,6 +84,27 @@ public class BlackJack {
             return 0;
 
     }
+
+    public int bust()
+    {
+        if (Playervalue > 21)
+            return 2;
+        if (Dealervalue > 21)
+            return 1;
+        else
+            return 0;
+    }
+
+    public int final_check()
+    {
+        if (Playervalue > Dealervalue)
+            return 1;
+        else if (Playervalue < Dealervalue)
+            return 2;
+        else
+            return 3;
+    }
+
     public String result()
     {
         int val = check21();
