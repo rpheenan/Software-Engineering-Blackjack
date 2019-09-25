@@ -36,5 +36,6 @@ public class MainActivity extends AppCompatActivity {
         player2Card.setText(cardArray[n2]);
         dealer1Card.setText(cardArray[n3]);
         dealer2Card.setText(cardArray[n4]);
+
     }
 }
