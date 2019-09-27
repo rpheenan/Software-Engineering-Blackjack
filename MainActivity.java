@@ -2,7 +2,9 @@ package com.example.brocburger.blackjack;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
+import android.view.View;
 
 import java.util.Random;
 
@@ -32,10 +34,38 @@ public class MainActivity extends AppCompatActivity {
         TextView dealer1Card = (TextView) findViewById(R.id.dealerCard1);
         TextView dealer2Card = (TextView) findViewById(R.id.dealerCard2);
 
-        player1Card.setText(cardArray[n1]);
-        player2Card.setText(cardArray[n2]);
-        dealer1Card.setText(cardArray[n3]);
-        dealer2Card.setText(cardArray[n4]);
+        player1Card.setText("" + cardArray[n1]);
+        player2Card.setText("" + cardArray[n2]);
+        dealer1Card.setText("" + cardArray[n3]);
+        dealer2Card.setText("" + cardArray[n4]);
+
 
     }
+
+    public void hit(View v)
+    {
+
+        TextView player3Card = (TextView) findViewById(R.id.playerCard3);
+        player3Card.setVisibility(View.VISIBLE);
+       // player3Card.setText("" + cardArray[n1]);
+
+        TextView player4Card = (TextView) findViewById(R.id.playerCard4);
+        player4Card.setVisibility(View.VISIBLE);
+
+        TextView player5Card = (TextView) findViewById(R.id.playerCard5);
+        player5Card.setVisibility(View.VISIBLE);
+
+    }
+
+    public void stop(View v)
+    {
+
+    }
+
+    public void newGame(View v)
+    {
+
+    }
+
+
 }
