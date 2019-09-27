@@ -10,8 +10,8 @@
         android:id="@+id/dealerCard2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/editText2"
         android:layout_alignStart="@+id/playerCard1"
+        android:layout_alignTop="@+id/dealerCard1"
         android:width="50dp"
         android:height="100dp"
         android:background="@color/cardColor"
@@ -30,7 +30,9 @@
         android:height="100dp"
         android:background="@color/cardColor"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:layout_marginRight="-135dp"
+        android:layout_toLeftOf="@+id/stopBtn" />
 
     <TextView
         android:id="@+id/dealerCard1"
@@ -43,7 +45,8 @@
         android:height="100dp"
         android:background="@color/cardColor"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:layout_alignLeft="@+id/playerCard2" />
 
     <TextView
         android:id="@+id/playerCard2"
@@ -56,21 +59,22 @@
         android:height="100dp"
         android:background="@color/cardColor"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="22dp" />
 
     <TextView
         android:id="@+id/dealerCard3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/playerCard3"
         android:layout_alignTop="@+id/dealerCard2"
-        android:layout_centerHorizontal="true"
         android:width="50dp"
         android:height="100dp"
         android:background="@color/cardColor"
         android:textAlignment="center"
-        android:textSize="30sp" 
-        android:visibility="invisible"
-        />
+        android:textSize="30sp"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/playerCard3"
@@ -85,21 +89,21 @@
         android:textAlignment="center"
         android:textSize="30sp"
         android:visibility="invisible"
-        />
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="150dp" />
 
     <TextView
         android:id="@+id/dealerCard4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/playerCard4"
         android:layout_alignTop="@+id/dealerCard2"
-        android:layout_toEndOf="@+id/editText"
         android:width="50dp"
         android:height="100dp"
         android:background="@color/cardColor"
         android:textAlignment="center"
         android:textSize="30sp"
-        android:visibility="invisible"
-        />
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/playerCard4"
@@ -113,7 +117,7 @@
         android:textAlignment="center"
         android:textSize="30sp"
         android:visibility="invisible"
-        />
+        android:layout_toRightOf="@+id/stopBtn" />
 
     <TextView
         android:id="@+id/dealerCard5"
@@ -127,7 +131,7 @@
         android:textAlignment="center"
         android:textSize="30sp"
         android:visibility="invisible"
-        />
+        android:layout_alignLeft="@+id/playerCard5" />
 
     <TextView
         android:id="@+id/playerCard5"
@@ -142,7 +146,8 @@
         android:textAlignment="center"
         android:textSize="30sp"
         android:visibility="invisible"
-        />
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="39dp" />
 
     <Button
         android:id="@+id/hitBtn"
@@ -152,8 +157,9 @@
         android:layout_alignTop="@+id/stopBtn"
         android:layout_marginStart="15dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="15dp" 
+        android:layout_marginLeft="15dp"
         android:text="HIT"
+        android:onClick="hit"
         />
 
     <Button
@@ -165,8 +171,9 @@
         android:layout_marginBottom="94dp"
         android:layout_marginStart="135dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="135dp" 
+        android:layout_marginLeft="135dp"
         android:text="STOP"
+        android:onClick="stop"
         />
 
     <Button
@@ -179,6 +186,7 @@
         android:layout_marginRight="30dp"
         android:layout_alignParentRight="true"
         android:text="NEW GAME"
+        android:onClick="newGame"
         />
 
     <EditText
