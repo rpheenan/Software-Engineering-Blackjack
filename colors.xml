@@ -1,1 +1,10 @@
-//colors for game
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="card1Color">#FF5555</color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="card2Color">#000000</color>
+
+</resources>
