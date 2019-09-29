@@ -14,7 +14,8 @@
         android:layout_alignTop="@+id/dealerCard1"
         android:width="50dp"
         android:height="100dp"
-        android:background="@color/cardColor"
+        android:background="@color/card1Color"
+        android:textColor="@color/textColor"
         android:textAlignment="center"
         android:textSize="30sp" />
 
@@ -28,7 +29,8 @@
         android:layout_toStartOf="@+id/stopBtn"
         android:width="50dp"
         android:height="100dp"
-        android:background="@color/cardColor"
+        android:background="@color/card1Color"
+        android:textColor="@color/textColor"
         android:textAlignment="center"
         android:textSize="30sp"
         android:layout_marginRight="-135dp"
@@ -43,7 +45,8 @@
         android:layout_marginTop="75dp"
         android:width="50dp"
         android:height="100dp"
-        android:background="@color/cardColor"
+        android:background="@color/card2Color"
+        android:textColor="@color/textColor"
         android:textAlignment="center"
         android:textSize="30sp"
         android:layout_alignLeft="@+id/playerCard2" />
@@ -57,7 +60,8 @@
         android:layout_marginStart="22dp"
         android:width="50dp"
         android:height="100dp"
-        android:background="@color/cardColor"
+        android:background="@color/card2Color"
+        android:textColor="@color/textColor"
         android:textAlignment="center"
         android:textSize="30sp"
         android:layout_alignParentLeft="true"
@@ -71,7 +75,8 @@
         android:layout_alignTop="@+id/dealerCard2"
         android:width="50dp"
         android:height="100dp"
-        android:background="@color/cardColor"
+        android:background="@color/card2Color"
+        android:textColor="@color/textColor"
         android:textAlignment="center"
         android:textSize="30sp"
         android:visibility="invisible" />
@@ -85,7 +90,8 @@
         android:layout_marginStart="150dp"
         android:width="50dp"
         android:height="100dp"
-        android:background="@color/cardColor"
+        android:background="@color/card2Color"
+        android:textColor="@color/textColor"
         android:textAlignment="center"
         android:textSize="30sp"
         android:visibility="invisible"
@@ -100,7 +106,8 @@
         android:layout_alignTop="@+id/dealerCard2"
         android:width="50dp"
         android:height="100dp"
-        android:background="@color/cardColor"
+        android:background="@color/card1Color"
+        android:textColor="@color/textColor"
         android:textAlignment="center"
         android:textSize="30sp"
         android:visibility="invisible" />
@@ -113,7 +120,8 @@
         android:layout_toEndOf="@+id/stopBtn"
         android:width="50dp"
         android:height="100dp"
-        android:background="@color/cardColor"
+        android:background="@color/card1Color"
+        android:textColor="@color/textColor"
         android:textAlignment="center"
         android:textSize="30sp"
         android:visibility="invisible"
@@ -127,7 +135,8 @@
         android:layout_alignTop="@+id/dealerCard2"
         android:width="50dp"
         android:height="100dp"
-        android:background="@color/cardColor"
+        android:background="@color/card1Color"
+        android:textColor="@color/textColor"
         android:textAlignment="center"
         android:textSize="30sp"
         android:visibility="invisible"
@@ -142,7 +151,8 @@
         android:layout_marginEnd="39dp"
         android:width="50dp"
         android:height="100dp"
-        android:background="@color/cardColor"
+        android:background="@color/card1Color"
+        android:textColor="@color/textColor"
         android:textAlignment="center"
         android:textSize="30sp"
         android:visibility="invisible"
@@ -210,5 +220,18 @@
         android:inputType="textPersonName"
         android:text="Player's Cards"
         android:layout_alignLeft="@+id/hitBtn" />
+
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:layout_toEndOf="@+id/dealerCard1"
+        android:ems="10"
+        android:inputType="textPersonName"
+         />
+
 
 </RelativeLayout>
