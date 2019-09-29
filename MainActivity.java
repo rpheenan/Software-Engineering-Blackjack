@@ -294,6 +294,12 @@ public class MainActivity extends AppCompatActivity {
                 btn.setEnabled(false);
                 btn2.setEnabled(false);
             }
+            //Checks if you lose after 5 cards drawn
+            if(blackJack.Playervalue < blackJack.Dealervalue){
+                editText.setText("You Have Lost");
+                btn.setEnabled(false);
+                btn2.setEnabled(false);
+            }
         }
         //If hit button is clicked more than 3 times disables hit button
         else{
@@ -333,7 +339,7 @@ public class MainActivity extends AppCompatActivity {
                 TextView dealer3Card = (TextView) findViewById(R.id.dealerCard3);
                 //Make 3rd card visible
                 dealer3Card.setVisibility(View.VISIBLE);
-                //Set 3rd card value 
+                //Set 3rd card value
                 dealer3Card.setText(findCard(cardArray[n1], n1));
                 //Check if dealer busts and output player has won and disable buttons
                 if (blackJack.dealer_bust()) {
