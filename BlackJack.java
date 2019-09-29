@@ -1,5 +1,7 @@
 package com.example.brocburger.blackjack;
 
+import android.content.pm.PackageManager;
+
 public class BlackJack {
 
 
@@ -69,7 +71,7 @@ public class BlackJack {
 
     public boolean isGameOver()
     {
-        return bust() > 0;
+        return player_bust();
     }
 
     public int check21()
@@ -85,24 +87,47 @@ public class BlackJack {
 
     }
 
-    public int bust()
-    {
-        if (Playervalue > 21)
-            return 2;
-        if (Dealervalue > 21)
-            return 1;
+    public boolean check_Win(){
+        if(Dealervalue > Playervalue || Dealervalue == Playervalue){
+            return true;
+        }
         else
-            return 0;
+            return false;
     }
 
-    public int final_check()
+    public boolean player_bust()
+    {
+        if(Playervalue > 21)
+            return true;
+        else
+            return false;
+    }
+
+    public boolean dealer_bust()
+    {
+        if(Dealervalue > 21)
+            return true;
+        else
+            return false;
+    }
+
+    public boolean ifPlayerWinning()
     {
         if (Playervalue > Dealervalue)
-            return 1;
-        else if (Playervalue < Dealervalue)
-            return 2;
+            return true;
         else
-            return 3;
+            return false;
+    }
+
+    public String finalCheck(){
+        if(Playervalue > Dealervalue){
+            return "You have Won";
+        }
+        else if (Dealervalue> Playervalue){
+            return "You have Lost";
+        }
+        else
+            return "You have Tied";
     }
 
     public String result()
