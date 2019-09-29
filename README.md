@@ -9,3 +9,7 @@ Ryan's estimation:
 I think the project will be about 400 lines of code.
 
 I think it will take about 10 hours all together to complete the project. 
+
+
+Here is the link to our demo:
+https://www.youtube.com/watch?v=eUJqvOrZ8ew
