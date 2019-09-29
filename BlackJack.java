@@ -3,7 +3,7 @@ package com.example.brocburger.blackjack;
 import android.content.pm.PackageManager;
 
 /**
- * This is the BlackJack class that describes the rules of Blackjack and calculates the score of the game
+ * BlackJack class that describes the rules of Blackjack and calculates the score of the game
  * @author BrocBurger
  * @author RyanHeenan
  * @version 1.0 09/29/19
@@ -30,7 +30,7 @@ public class BlackJack {
     }
 
     /**
-     * sets up start of game with giving both player and dealer 2 cards
+     * sets up start of game where both player and dealer recieve 2 cards
      * @param Playerval1
      *          value of player card 1
      * @param Playerval2 
@@ -45,22 +45,20 @@ public class BlackJack {
     {
         Playervalue += (Playerval1 + Playerval2);
         Dealervalue += (Dealerval1 + Dealerval2);
-        //Checking if card is an ace and if it is adding one to the number of aces variable for player
+        //Checking if card is an ace and then adding one to the number of aces variable for player
         if (Playerval1  == 11)
             PlayernumAces += 1;
-        //Checking if card is an ace and if it is adding one to the number of aces variable for player
         if (Playerval2 == 11)
             PlayernumAces +=1;
-        //Checking if card is an ace and if it is adding one to the number of aces variable for dealer
+         //Checking if card is an ace and then adding one to the number of aces variable for dealer
         if (Dealerval1 == 11)
             DealernumAces += 1;
-        //Checking if card is an ace and if it is adding one to the number of aces variable for dealer
         if (Dealerval2  == 11)
             DealernumAces +=1;
     }
 
     /*
-     * When player hits does the math for the new card and adds it to value of hand
+     * Method that adds value of a new card to hand after a player hits
      * @param val
      *      New value of card to add to total hand
      * @return None
@@ -82,7 +80,7 @@ public class BlackJack {
      */
     public int PlayercheckAces()
     {
-        //Changes value of Ace if the value of total hand is over 21 from 11 to 1
+        //Changes value of Ace from 11 to 1 if the value of total hand is over 21
         while(Playervalue > 21 && PlayernumAces > 0)
         {
             Playervalue -= 10;
@@ -92,7 +90,7 @@ public class BlackJack {
     }
 
     /*
-     * When dealer hits does the math for the new card and adds it to value of hand
+     * Method that adds value of a new card to hand after a dealer hits
      * @param val
      *      New value of card to add to total hand
      * @return None
@@ -114,7 +112,7 @@ public class BlackJack {
      */
     public int DealercheckAces()
     {
-        //Changes value of Ace if the value of total hand is over 21 from 11 to 1
+        //Changes value of Ace from 11 to 1 if the value of total hand is over 21
         while(Dealervalue > 21 && DealernumAces > 0)
         {
             Dealervalue -= 10;
@@ -124,7 +122,7 @@ public class BlackJack {
     }
 
     /*
-     * Checks in beginning of game if either dealer or player has 21 or if both
+     * Checks in beginning of game if either dealer, player, or both have 21 
      * @returns
      *      int representing game won(1) loss(2) or tied(3)
      */
@@ -146,9 +144,9 @@ public class BlackJack {
     }
 
     /*
-     * Checks if dealer has beaten player or tied them
+     * Checks if dealer has beaten player or tied with them
      * @returns
-     *      boolean true if dealer is winning or tied false if not
+     *      boolean true if dealer is winning or tied, false if not
      */
     public boolean check_Win(){
         //If dealer beats player or ties player
@@ -162,7 +160,7 @@ public class BlackJack {
     /*
      * Checks if player value is over 21
      * @returns
-     *      returns true if player has busts false if not
+     *      returns true if player has busted, false if not
      */
     public boolean player_bust()
     {
@@ -176,7 +174,7 @@ public class BlackJack {
     /*
      * Checks if dealer value is over 21
      * @returns
-     *      returns true if dealer has busts false if not
+     *      returns true if dealer has busted, false if not
      */
     public boolean dealer_bust()
     {
@@ -188,9 +186,9 @@ public class BlackJack {
     }
 
     /*
-     * Checks if player still is winning while dealer hits
+     * Checks if player is still winning while dealer hits
      * @ returns 
-     *      Returns true if player is still have higher value false if not
+     *      Returns true if player still has higher hand value, false if not
      */
     public boolean ifPlayerWinning()
     {
@@ -202,7 +200,7 @@ public class BlackJack {
     }
     
     /*
-     * Outputs result of game if dealer or player have won or if there was a tie
+     * Outputs result of game: if dealer or player have won or if there was a tie
      * @returns
      *      returns a string of win lost or tie depending on result of game 
      */
