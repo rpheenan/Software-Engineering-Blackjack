@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         //card array of a 52 card deck
         cardArray = new int[]{11,2,3,4,5,6,7,8,9,10,10,10,10,11,2,3,4,5,6,7,8,9,10,10,10,10,
         11,2,3,4,5,6,7,8,9,10,10,10,10,11,2,3,4,5,6,7,8,9,10,10,10,10};
-        //Creates the start of game giving player and dealer 2 random cards each
+        //Creates the start of game giving player and dealer 2 cards each
         blackJack.startGame(cardArray[n1], cardArray[n2], cardArray[n3], cardArray[n4]);
 
         //Accessing the player and dealer's 2 cards
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
-     * Finding the card value and checking if it is a face card or ace and having them display that
+     * Finding the card value and checking if it is a face card or ace and having them display face value
      * @param
      *      int cardValue value of card from array
      * @param
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
     {
         //keeping track of how many clicks
         count++;
-        //running player method to effect the cards
+        //running player method to affect the cards
         player_run(count);
     }
 
