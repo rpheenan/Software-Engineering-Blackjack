@@ -10,8 +10,8 @@ import android.content.pm.PackageManager;
  */
 
 public class BlackJack {
-    
-    // Int representing value of dealer's hand.
+    /** Make the comments within javadoc commenting block */
+    //Int representing value of dealer's hand.
     public int Dealervalue;
     // Int representing value of Player's hand.
     public int Playervalue;
